@@ -1,0 +1,10 @@
+{% extends "base.html"%}
+{%block content%}
+
+<h3 class="card-panel center-align blue lighten-2 ">{{title}}</h3>
+<form class = "card-panel" method = "POST">{% csrf_token %}
+    <p class = "center-align">
+    {{form.as_p}}
+        </p>
+<input type="Submit" class="card-panel left-align teal lighten-2" value="Submit">
+{%endblock%}

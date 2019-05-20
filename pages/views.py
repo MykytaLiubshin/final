@@ -24,7 +24,7 @@ def homepage_view(request):
         a = form.save()
         print(a)
         form = ProductForm()
-        standard_domain = "https://git.heroku.com/home/"
+        standard_domain = "https://linksho.herokuapp.com/home/"
         context = {
             'std' : standard_domain,
             'link' : coding(a.id),
@@ -41,14 +41,11 @@ def homepage_view(request):
 def home_red(request):
     return redirect('/home')
 
-def dynamic_user_view(request, aut):
-    pass
-
 class UserPostListView(ListView):
     model = Product
     template_name = 'user_posts.html'
     context_object_name = 'links'
-    context_std = "https://git.heroku.com/home/"
+    context_std = "https://linksho.herokuapp.com/home/"
     def get_queryset(self):
         user = get_object_or_404(User, username = self.kwargs.get('username'))
         return Product.objects.filter(author=user).order_by('-date_posted')

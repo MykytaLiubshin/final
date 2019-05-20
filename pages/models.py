@@ -9,7 +9,7 @@ class Product(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     
     def __str__(self):
-        return str(coding(self.id)),self.link
+        return str(coding(self.id))
     
     def get_absolute_url(self):
         return reverse("rd", kwargs={'rd':coding(self.id)})

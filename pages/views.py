@@ -43,9 +43,12 @@ def home_red(request):
 
 class UserPostListView(ListView):
     model = Product
+    ilink = model.link
+    dat = model.date_posted
     template_name = 'user_posts.html'
     context_object_name = 'links'
     context_std = "https://linksho.herokuapp.com/home/"
+
     context = {
         "ilink" : Product,
     }

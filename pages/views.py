@@ -24,7 +24,7 @@ def homepage_view(request):
         a = form.save()
         print(a)
         form = ProductForm()
-        standard_domain = "localhost:8000/home/"
+        standard_domain = "https://git.heroku.com/linksho.git/home/"
         context = {
             'std' : standard_domain,
             'link' : coding(a.id),

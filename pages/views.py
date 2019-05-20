@@ -52,7 +52,7 @@ class UserPostListView(ListView):
 
     context = {
             'std' : standard_domain,
-            "ilink" : a
+            "ilink" : a,
             'link' : coding(a.id),
         }
     def get_queryset(self):

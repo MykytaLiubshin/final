@@ -48,13 +48,7 @@ class UserPostListView(ListView):
     model = Product
     template_name = 'user_posts.html'
     context_object_name = 'links'
-    standard_domain = "https://git.heroku.com/home/"
-
-    context = {
-            'std' : standard_domain,
-            "ilink" : a,
-            'link' : coding(a.id),
-        }
+    context_std = "https://git.heroku.com/home/"
     def get_queryset(self):
         user = get_object_or_404(User, username = self.kwargs.get('username'))
         return Product.objects.filter(author=user).order_by('-date_posted')

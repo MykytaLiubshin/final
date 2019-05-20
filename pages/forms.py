@@ -13,6 +13,6 @@ class ProductForm(forms.ModelForm):
         link = self.cleaned_data.get('link')
         valid = True
         redirect = ""
-        if "https" not in link:
-            link = 'https://%s'%link
+        if "." not in link:
+            raise "Invalid input"
         return link

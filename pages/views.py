@@ -53,4 +53,6 @@ class UserPostListView(ListView):
 def dynamic_lookup_view(request, rd):
     m_id = decode(rd)
     obj = get_object_or_404(Product,id=m_id)
+    print("Red link %s"%str(obj.link))
+
     return redirect(obj.link)

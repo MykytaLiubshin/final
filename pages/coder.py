@@ -12,7 +12,7 @@ def coding(id):
     try:
         id1 = "%06i"%int(id1)
     except:
-        return redirect(https://linksho.herokuapp.com/home/)
+        return redirect("https://linksho.herokuapp.com/home/")
     for i in range(10):
         id1 = id1.replace(str(i),string[i])
     return id1

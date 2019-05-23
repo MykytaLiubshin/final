@@ -15,4 +15,6 @@ class ProductForm(forms.ModelForm):
         redirect = ""
         if "." not in link:
             raise forms.ValidationError("This is not a valid url")
+        if "http:" not in link and "https:" not in link:
+            link = 'http://%s'%link 
         return link

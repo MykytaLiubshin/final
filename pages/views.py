@@ -51,7 +51,7 @@ class UserPostListView(ListView):
         return Product.objects.filter(author=user).order_by('-date_posted')
 
 def dynamic_lookup_view(request, rd):
-    if isinstance(rd,str):
+    if "." in rd:
         return redirect(rd)
     m_id = decode(rd)
     obj = get_object_or_404(Product,id=m_id)

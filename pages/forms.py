@@ -14,5 +14,5 @@ class ProductForm(forms.ModelForm):
         valid = True
         redirect = ""
         if "." not in link:
-            raise "Invalid input"
+            raise forms.ValidationError("This is not a valid url")
         return link

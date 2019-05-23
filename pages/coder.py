@@ -3,7 +3,7 @@ from textwrap import fill
 def coding(id):
     id1 = str(id)
     string = 'qwertyuiopasdfghjklzxcvbnm'
-    id1 = "%04i"%int(id1)
+    id1 = "%06i"%int(id1)
     for i in range(10):
         id1 = id1.replace(str(i),string[i])
     return id1

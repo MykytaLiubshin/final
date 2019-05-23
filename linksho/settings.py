@@ -1,12 +1,12 @@
 import os
 import django_heroku
+import dj_database_url
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = '-xh50qit$3g*^ho)#c3cw%e4#*si8y%i+s_qpa))naqdkxu%om'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -86,9 +86,6 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-# Internationalization
-# https://docs.djangoproject.com/en/2.2/topics/i18n/
-
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
@@ -106,5 +103,4 @@ LOGIN_REDIRECT_URL = '/home/'
 LOGIN_URL = 'login'
 django_heroku.settings(locals())
 
-import dj_database_url
 DATABASES['default'] =  dj_database_url.config()

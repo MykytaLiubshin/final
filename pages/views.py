@@ -22,7 +22,7 @@ def homepage_view(request):
     """
     form = ProductForm(request.POST or None)
     if form.is_valid():
-          return making_link(request)
+          return making_link(request,form)
     else:
         print(form.errors)
     context = { 
@@ -31,9 +31,9 @@ def homepage_view(request):
     }
     return render(request, "home.html", context)
 
-def making_link(request):
+def making_link(request,form):
     """
-    making_link(request,/)
+    making_link(request,form,/)
     returns a result page w/ your shorten link
     """
 

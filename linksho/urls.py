@@ -3,7 +3,7 @@ from django.urls import path
 from django.contrib.auth import views as auth_views
 
 from pages.views import homepage_view, home_red, dynamic_lookup_view, UserPostListView
-from users.views import register_view,profile
+from users.views import register_view
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_red),

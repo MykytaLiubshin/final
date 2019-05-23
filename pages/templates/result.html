@@ -2,6 +2,15 @@
 {%block content%}
 
 <h3 class = 'card-panel'> Your link is <a href = {{std}}{{link}}> {{link}} </a> 
-    <button value="{{std}}{{link}}" class="button" type="submit" value="Copy">Copy</button> </h3>
+    <button class="left-align" onclick="cop({{std}}{{link}})">Copy</button> </h3>
+
+<script>
+    function cop(value) {
+      var copy = value;
+      copy.select();
+      document.execCommand("copy");
+      alert("Copied the link: " + copy);
+    }
+    </script>
 
 {%endblock%}

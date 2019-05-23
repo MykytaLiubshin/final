@@ -2,15 +2,5 @@
 {%block content%}
 
 <h3 class = 'card-panel' id = "copy" value = {{std}}{{link}}> Your link is <a href = {{std}}{{link}}> {{link}} </a> 
-    <button onclick="myFunction()" class = "teal left-align">Copy</button>
-
-<script>
-    function myFunction() {
-  var copylink = document.getElementById("copy");
-  copylink.select();
-  document.execCommand("copy");
-  alert("Copied the text: " + copylink.value);
-    }
-    </script>
 
 {%endblock%}

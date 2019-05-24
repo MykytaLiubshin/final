@@ -44,7 +44,7 @@ def making_link(request,form):
     a = form.save()
     print(a)
     form = ProductForm()
-    standard_domain = "https://linksho.herokuapp.com/home/"
+    standard_domain = "https://linksho.herokuapp.com/"
     context = {
         'std' : standard_domain,
         'link' : coding(a.id),

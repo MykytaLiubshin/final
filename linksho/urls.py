@@ -15,6 +15,6 @@ urlpatterns = [
     
     path('user/<str:username>', UserPostListView.as_view(), name='user-posts'),
 
-    path(r'home/'+('<str:rd>'), dynamic_lookup_view, name = 'result')
+    path(r''+('<str:rd>'), dynamic_lookup_view, name = 'result')
 ]
 

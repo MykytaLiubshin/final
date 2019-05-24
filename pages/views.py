@@ -56,7 +56,7 @@ def home_red(request):
     home_red(request,/)
     Redirects you from the app link to the home link
     """
-    return redirect('/home')
+    return redirect('/home/')
 
 class UserPostListView(ListView):
     """
